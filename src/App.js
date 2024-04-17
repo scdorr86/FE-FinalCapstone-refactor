@@ -20,7 +20,7 @@ function App() {
         >
           Learn React
         </a>
-        <Button icon="pi pi-user" severity="info">Sign-In</Button>
+        <Button icon="pi pi-user" severity="info">Sign-In!</Button>
       </header>
       
     </div>
