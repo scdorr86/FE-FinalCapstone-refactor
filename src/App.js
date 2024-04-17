@@ -1,8 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { PrimeReactProvider } from 'primereact/api';
+import { Button } from 'primereact/button';
 
 function App() {
   return (
+    <PrimeReactProvider>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -17,8 +20,11 @@ function App() {
         >
           Learn React
         </a>
+        <Button icon="pi pi-user" severity="info">Sign-In</Button>
       </header>
+      
     </div>
+    </PrimeReactProvider>
   );
 }
 
