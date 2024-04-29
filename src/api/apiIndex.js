@@ -7,10 +7,10 @@ const API = {
     
   },
   ChristmasYear: {
-    list: async () => Http.get(`${BASE_URL}/Year/Years`),
+    years: async () => Http.get(`${BASE_URL}/Year/Years`),
   },
   ChristmasList: {
-    list: async () => Http.get(`${BASE_URL}/List/lists`),
+    lists: async () => Http.get(`${BASE_URL}/List/lists`),
   }
 };
 

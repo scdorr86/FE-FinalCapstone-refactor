@@ -3,9 +3,30 @@ import './App.css';
 import { PrimeReactProvider } from 'primereact/api';
 import { Button } from 'primereact/button';
 import { Card } from "primereact/card";
+import { useEffect, useState } from 'react';
+import API from './api/apiIndex';
+
 
 
 function App() {
+  const [lists, setLists] = useState();
+
+  const getLists = async () => {
+    const response = await API.ChristmasList.lists();
+    console.log("response", response);
+    // if(response) {
+    //   setLists(response);
+    //   console.log("lists:", lists)
+    // } else {
+    //   console.log("no lists", response)
+    // }
+  }
+
+  useEffect(() => {
+    getLists();
+  },[]);
+
+
   return (
     <PrimeReactProvider>
     <div className="App">
