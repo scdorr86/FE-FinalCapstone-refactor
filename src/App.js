@@ -1,15 +1,15 @@
 import logo from './logo.svg';
+import { NavLink } from "react-router-dom";
 import './App.css';
 import { PrimeReactProvider } from 'primereact/api';
 import { Button } from 'primereact/button';
-import { Card } from "primereact/card";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import API from './api/apiIndex';
 
 
 
 function App() {
-  const [lists, setLists] = useState();
+  //const [lists, setLists] = useState();
 
   const getLists = async () => {
     const response = await API.ChristmasList.lists();
@@ -22,8 +22,14 @@ function App() {
     // }
   }
 
+  const getYears = async () => {
+    const yrResponse = await API.ChristmasYear.years();
+    console.log(("year call:", yrResponse));
+  }
+
   useEffect(() => {
     getLists();
+    getYears();
   },[]);
 
 
@@ -44,6 +50,8 @@ function App() {
           Learn React
         </a>
         <Button icon="pi pi-user" severity="info">Sign-In!</Button>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/Years">Years</NavLink>
       </header>
       
     </div>
