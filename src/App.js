@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import { NavLink } from "react-router-dom";
-import './App.css';
 import { PrimeReactProvider } from 'primereact/api';
 import { Button } from 'primereact/button';
 import { useEffect } from 'react';
 import API from './api/apiIndex';
+
 
 
 
@@ -51,7 +51,7 @@ function App() {
         </a>
         <Button icon="pi pi-user" severity="info">Sign-In!</Button>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/Years">Years</NavLink>
+        <NavLink to="/years">Years</NavLink>
       </header>
       
     </div>
