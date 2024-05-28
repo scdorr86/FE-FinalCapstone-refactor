@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 
 
 function YearsPage() {
-  const [years, setYear] = useState();
+  const [years, setYear] = useState([]);
 
 
   const getYears = async () => {
@@ -26,7 +26,7 @@ function YearsPage() {
     <PrimeReactProvider>
     <div className="Years">
       
-      {years ? (years.map((y) => (
+      {years.length > 0 ? (years.map((y) => (
         <ul>{y.listYear}</ul>
       ))) : null}
       <NavLink to="/">Home</NavLink>
