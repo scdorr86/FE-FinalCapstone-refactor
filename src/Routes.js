@@ -16,10 +16,10 @@ import App from "./App";
 export const Routes = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<App />}>
+      <Route path="years" element={<YearsPage />} />
         {/* <Route index element={<HomePage />} /> */}
-        <Route path="years" element={<YearsPage />} />
-      </Route>      
+        
+      <Route path="/" element={<App />}></Route>     
     </>
   )
 );
