@@ -9,6 +9,7 @@ import {
 //import HomePage from "./pages/Home";
 import YearsPage from "./pages/Years";
 import App from "./App";
+import GiftsPage from "./pages/Gifts";
 
 // COMPONENTS
 
@@ -18,6 +19,7 @@ export const Routes = createBrowserRouter(
     <>
       <Route path="years" element={<YearsPage />} />
         {/* <Route index element={<HomePage />} /> */}
+      <Route path="gifts" element={<GiftsPage/>} />
         
       <Route path="/" element={<App />}></Route>     
     </>

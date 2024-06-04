@@ -11,6 +11,9 @@ const API = {
   },
   ChristmasList: {
     lists: async () => Http.get(`${BASE_URL}/List/lists`),
+  },
+  ChristmasGift: {
+    gifts: async () => Http.get(`${BASE_URL}/Gift/gifts`),
   }
 };
 
