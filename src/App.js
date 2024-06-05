@@ -52,6 +52,7 @@ function App() {
         <Button icon="pi pi-user" severity="info">Sign-In!</Button>
         <NavLink to="/">Home</NavLink>
         <NavLink to="years">Years</NavLink>
+        <NavLink to="gifts">Gifts</NavLink>
       </header>
     </div>
     </PrimeReactProvider>
