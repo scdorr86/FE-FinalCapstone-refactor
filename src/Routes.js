@@ -19,7 +19,9 @@ export const Routes = createBrowserRouter(
     <>
       <Route path="years" element={<YearsPage />} />
         {/* <Route index element={<HomePage />} /> */}
-      <Route path="gifts" element={<GiftsPage/>} />
+      <Route path="gifts" element={<GiftsPage/>}> 
+        <Route path=":id" element={<h1>details</h1>}></Route>
+      </Route>
         
       <Route path="/" element={<App />}></Route>     
     </>
