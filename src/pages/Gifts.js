@@ -3,7 +3,8 @@ import { PrimeReactProvider } from 'primereact/api';
 // import { Card } from "primereact/card";
 import { useEffect, useState } from 'react';
 import API from './../api/apiIndex';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet, RouterProvider } from 'react-router-dom';
+import { Button } from 'primereact/button';
 
 
 
@@ -27,10 +28,11 @@ function GiftsPage() {
     <div className="Gifts">
       
       <p>test:</p>
-        {gifts.data ? (gifts.data.map((g) => (<ul key={g.id}>{g.giftName}</ul>))) : null}
+        {gifts.data ? (gifts.data.map((g) => (<><ul key={g.id}>{g.giftName}</ul><NavLink to={`${g.id}`}>details</NavLink></>)))  : null}
       <NavLink to="/">Home</NavLink>
       <NavLink to="years">Years</NavLink>
     </div>
+    <Outlet></Outlet>
     </PrimeReactProvider> 
   );
 }
