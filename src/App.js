@@ -4,6 +4,7 @@ import { PrimeReactProvider } from 'primereact/api';
 import { Button } from 'primereact/button';
 import { useEffect } from 'react';
 import API from './api/apiIndex';
+import Nav from './components/nav/Nav';
 
 
 
@@ -36,6 +37,7 @@ function App() {
   return (
     <PrimeReactProvider>
     <div className="App">
+      <Nav/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

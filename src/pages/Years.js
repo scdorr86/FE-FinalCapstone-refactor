@@ -26,9 +26,9 @@ function YearsPage() {
     <PrimeReactProvider>
     <div className="Years">
       
-     <p>test:</p> 
-      {years.data.length > 0 ? (years.data.map((y) => (
-        <ul>{y.listYear}</ul>
+     <p>test year call:</p> 
+      {years?.data?.length > 0 ? (years?.data?.map((y) => (
+        <ul>{y?.listYear}</ul>
       ))) : null}
       <NavLink to="/">Home</NavLink>
     </div>
